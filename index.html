@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+  <link rel="icon" href="assets/icon/card.png">
+	<link rel="stylesheet" href="css/main.css">
+  <title>Validación de tarjeta de crédito </title>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-7 col-sm-offset-3">
+        <div id="answer" class="answer bg-primary text-center"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-5 col-sm-offset-3">
+        <form>
+          <!-- Número de tarjeta de crédito -->
+          <div class="form-group">
+            <label for="cn">Número de tarjeta</label>
+            <div class="row">
+              <input id="cn" class="col-sm-10" name="cn"  required  placeholder="Ingresa la tarjeta de cédito" maxlength="16" pattern="[0-9]{16}" />
+              <span class="validity col-sm-2"></span>
+            </div>
+          </div>
+          <!-- Fecha de vencimiento -->
+          <div class="form-group">
+            <label for="exp">Fecha de vencimiento</label>
+            <div class="row">
+              <input class="col-sm-10 " id="month" type="month" name="month" min="2018-02"  required>
+              <span class="validity col-sm-2"></span>
+            </div>
+          </div>
+          <!-- Código de seguridad -->
+          <div class="form-group">
+            <label for="cvv">CVV</label>
+            <div class="row">
+              <input id="cvv" class="col-sm-10" name="cvv"  required  placeholder="CVV" maxlength="3" pattern="[0-9]{3}" />
+              <span class="validity col-sm-2"></span>
+            </div>
+          </div>
+          <!-- Nombre -->
+          <div class="form-group">
+            <label for="name">Ingresa tu nombre</label>
+            <div class="row">
+              <input id="name" class="col-sm-10" name="name" placeholder="Ingresa tu nombre y apellido" pattern="[A-Za-z]{1,30}[\s ][A-Za-z]{1,30}"  title="name"  required  maxlength="50"/>
+              <span class="validity col-sm-2"></span>
+            </div>
+          </div>
+          <!-- Botón de enviar -->
+          <input class="submit" type="submit" value="Pagar" />
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
